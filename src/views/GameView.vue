@@ -6,7 +6,7 @@ import GameWord from '../components/GameWord.vue'
 import GameNotification from '../components/GameNotification.vue'
 import GamePopup from '../components/GamePopup.vue'
 
-import {computed, ref, watch} from 'vue'
+import {computed, ref} from 'vue'
 
 window.addEventListener('keydown', ({key}) => {
   if (letters.value.includes(key)) {
@@ -37,7 +37,6 @@ const wrongLetters = computed(() => letters.value.filter(x => !word.value.includ
 
 <template>
   <main>
-    {{ letters }}
     <game-header title="Game" description="write correct word"/>
     <div class="game-container">
       <game-figure :wrongLettersCount="wrongLetters.length"/>
