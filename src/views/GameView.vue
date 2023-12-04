@@ -11,7 +11,7 @@ import {computed, ref, watch} from 'vue'
 window.addEventListener('keydown', ({key}) => {
   if (letters.value.includes(key)) {
     notification.value?.openModal()
-    setTimeout(()=> notification.value?.closeModal(), 2500)
+    setTimeout(() => notification.value?.closeModal(), 2000)
     return
   }
 
