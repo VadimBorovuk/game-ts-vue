@@ -20,7 +20,7 @@ window.addEventListener('keydown', ({key}) => {
   }
 })
 const notification = ref<InstanceType<typeof GameNotification> | null>(null)
-const word = ref<string>('pizza')
+const word = ref<string>('spagetty')
 const letters = ref<string[]>([])
 
 const currectLetters = computed(() => letters.value.filter(x => word.value.includes(x)))
