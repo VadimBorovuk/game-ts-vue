@@ -34,7 +34,7 @@ window.addEventListener('keydown', ({key}) => {
 })
 const notification = ref<InstanceType<typeof GameNotification> | null>(null)
 const popup = ref<InstanceType<typeof GamePopup> | null>(null)
-const word = ref<string>('cheese')
+const word = ref<string>('mouse')
 const letters = ref<string[]>([])
 
 const correctLetters = computed(() => letters.value.filter(x => word.value.includes(x)))
