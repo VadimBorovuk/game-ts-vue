@@ -1,7 +1,7 @@
 <template>
   <div class="word">
     <span v-for="(letter, idx) in word" :key="idx" class="letter">
-      {{ currectLetters.includes(letter) ? letter : '' }}
+      {{ correctLetters.includes(letter) ? letter : '' }}
     </span>
   </div>
 </template>
@@ -11,6 +11,6 @@ import {defineProps} from "vue";
 
 defineProps<{
   word: string
-  currectLetters: Array<string>
+  correctLetters: Array<string>
 }>()
 </script>
