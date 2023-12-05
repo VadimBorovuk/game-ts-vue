@@ -12,15 +12,18 @@
 </template>
 
 <script setup lang="ts">
-import {defineEmits, defineExpose, defineProps, ref} from "vue";
+import {defineEmits,
+  defineExpose,
+  defineProps,
+  ref}
+  from "vue";
+import type {GameStatus} from "@/types/GameStatus";
 
-type Status = 'win' | 'lose'
-
-const gameStatus = ref<Status | null>(null)
+const gameStatus = ref<GameStatus | null>(null)
 
 const isVisible = ref(false)
 
-const openModal = (status: Status) => {
+const openModal = (status: GameStatus) => {
   gameStatus.value = status
   isVisible.value = true
 }
